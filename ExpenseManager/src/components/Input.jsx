@@ -19,7 +19,7 @@ function Input({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`border border-orange-600 px-1 py-0.5 focus:outline-none focus:ring-1 focus:ring-orange-500 ${className}`}
+          className={`border bg-[#e9ecef] border-orange-600 px-1 py-0.5 focus:outline-none focus:ring-1 focus:ring-orange-500 ${className}`}
           {...props}
         />
       </span>
