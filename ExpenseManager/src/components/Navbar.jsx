@@ -33,8 +33,7 @@ export default function Navbar() {
             className="text-md font-light"
             buttonText="Track"
             btnClassName=" bg-orange-500 
-            hover:bg-orange-600 border-1 border-t border-r border-b
-"
+            hover:bg-orange-600 border-1 border-t border-r border-b"
           />
         </div>
       </div>
