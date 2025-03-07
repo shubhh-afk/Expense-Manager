@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import Input from "./Input";
-import Button from "./Button";
-import { useState } from "react";
 import InputButton from "./InputButton";
 
 export default function Navbar() {
-  const [trackingNumber, setTrackingNumber] = useState("");
-
   return (
     <nav className="w-full mt-0 h-15 flex bg-gray-400 justify-between items-center px-5">
       <h1 className="text-xl font-bold">Expense Manager</h1>
