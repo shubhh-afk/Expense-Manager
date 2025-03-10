@@ -20,7 +20,7 @@ function Input({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className={`px-2 py-0.5 rounded-xs border bg-gray-50 border-orange-500  focus:outline-none focus:ring-1 focus:ring-orange-600 ${className}`}
+          className={`p-1 rounded-xs border bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-600 ${className}`}
           {...props}
         />
       </span>
