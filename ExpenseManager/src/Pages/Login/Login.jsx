@@ -3,7 +3,7 @@ import React from "react";
 function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#1a1e2b]">
-      <div className="w-full max-w-md p-8 bg-white/10 backdrop-blur-lg border border-orange-500 rounded-lg shadow-lg">
+      <div className="w-full max-w-md p-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg shadow-lg">
         <h2 className="text-center text-2xl font-bold text-orange-500">Log in to your account</h2>
 
         <form className="mt-6 space-y-4">
