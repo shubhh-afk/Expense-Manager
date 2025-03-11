@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import SideBar, { SideBarItems } from "./SideBar";
 import Footer from "./Footer";
@@ -6,11 +6,11 @@ import { CircleUserRound, Home, LayoutDashboard, Receipt } from "lucide-react";
 
 export default function Layout() {
   return (
-    <div className="flex min-h-screen bg-gray-900">
+    <div className="flex min-h-screen text-white bg-gray-900">
       <SideBar>
-        <SideBarItems icon={<CircleUserRound size={30} />} text="Profile" />
-        <SideBarItems icon={<LayoutDashboard size={30} />} text="Dashboard" />
-        <SideBarItems icon={<Receipt size={30} />} text="Expenses" active />
+        <SideBarItems icon={<CircleUserRound size={30} />} text="Profile" to="/profile"/>
+        <SideBarItems icon={<LayoutDashboard size={30} />} text="Dashboard" to="/dashboard" />
+        <SideBarItems icon={<Receipt size={30} />} text="Expenses" to="/manage-expenses" />
       </SideBar>
       <div className="flex flex-grow flex-col">
         <Navbar />
