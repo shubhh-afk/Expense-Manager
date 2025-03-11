@@ -20,10 +20,16 @@ function ManageExpenses() {
         </Link>
       </div>
       <div className="flex justify-between text-sm mb-6">
-        <a href="#" className="text-orange-400 hover:text-orange-300 transition">
+        <a
+          href="#"
+          className="text-orange-400 hover:text-orange-300 transition"
+        >
           Vendor Registration Form
         </a>
-        <a href="#" className="text-orange-400 hover:text-orange-300 transition">
+        <a
+          href="#"
+          className="text-orange-400 hover:text-orange-300 transition"
+        >
           Temporary Employment
         </a>
       </div>
@@ -31,12 +37,12 @@ function ManageExpenses() {
       {/* Search Filters */}
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-orange-400">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <Input type="date" label="Expense Date" className="bg-gray-700 border border-gray-600 text-white" />
-          <Input type="number" label="From Bill Amount" className="bg-gray-700 border border-gray-600 text-white" />
-          <Input type="number" label="To Bill Amount" className="bg-gray-700 border border-gray-600 text-white" />
-          <Input type="text" label="Vendor Name" className="bg-gray-700 border border-gray-600 text-white" />
-          <Input type="text" label="Vendor GST No" className="bg-gray-700 border border-gray-600 text-white" />
-          <Input type="text" label="Bill No" className="bg-gray-700 border border-gray-600 text-white" />
+          <Input type="date" label="Expense Date" className="bg-white/10" />
+          <Input type="number" label="From Bill Amount" className="bg-white/10"/>
+          <Input type="number" label="To Bill Amount" className="bg-white/10" />
+          <Input type="text" label="Vendor Name" className="bg-white/10" />
+          <Input type="text" label="Vendor GST No" className="bg-white/10" />
+          <Input type="text" label="Bill No" className="bg-white/10" />
         </div>
 
         <div className="flex justify-end">
@@ -50,7 +56,11 @@ function ManageExpenses() {
       {/* Approve & Download Section */}
       <div className="flex justify-between items-center mt-6">
         <div className="flex items-center">
-          <input type="checkbox" id="approveAll" className="w-5 h-5 cursor-pointer accent-orange-500" />
+          <input
+            type="checkbox"
+            id="approveAll"
+            className="w-5 h-5 cursor-pointer accent-orange-500"
+          />
           <label htmlFor="approveAll" className="ml-2 text-sm font-semibold">
             Approve All
           </label>
@@ -117,7 +127,10 @@ function ManageExpenses() {
               ].map((field, index) => (
                 <td key={index} className="p-3 border border-gray-600">
                   {field.type === "text" ? (
-                    <Input type="text" className="w-full h-full bg-gray-700 text-white border-gray-600" />
+                    <Input
+                      type="text"
+                      className="w-full h-full bg-gray-700 text-white border-gray-600"
+                    />
                   ) : (
                     <select className="w-full border rounded px-2 py-1 bg-gray-700 text-white border-gray-600">
                       {field.options.map((option) => (
@@ -134,10 +147,18 @@ function ManageExpenses() {
               <td className="p-3 border border-gray-600">
                 <div className="flex justify-center gap-3">
                   <button className="text-green-400 hover:text-green-300 transition">
-                    <HugeiconsIcon icon={Edit02Icon} size={18} strokeWidth={1} />
+                    <HugeiconsIcon
+                      icon={Edit02Icon}
+                      size={18}
+                      strokeWidth={1}
+                    />
                   </button>
                   <button className="text-red-500 hover:text-red-400 transition">
-                    <HugeiconsIcon icon={Delete02Icon} size={18} strokeWidth={1} />
+                    <HugeiconsIcon
+                      icon={Delete02Icon}
+                      size={18}
+                      strokeWidth={1}
+                    />
                   </button>
                 </div>
               </td>
