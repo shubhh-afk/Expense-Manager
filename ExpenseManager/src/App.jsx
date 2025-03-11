@@ -6,6 +6,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import CreateExpense from "./Pages/Expense/CreateExpense";
 import ManageExpenses from "./Pages/Expense/ManageExpenses";
 import Layout from "./components/Layout";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
       path: "",
       element: <Layout />,
       children: [
+        {
+          path: "/profile",
+          element: <Profile/>,
+        },
         {
           path: "/dashboard",
           element: <Dashboard />,
