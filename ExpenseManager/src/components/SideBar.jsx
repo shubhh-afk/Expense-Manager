@@ -6,6 +6,8 @@ import {
   ChevronLeft,
 } from "lucide-react";
 
+import { NavLink, useLocation } from "react-router-dom";
+
 const SidebarContext = createContext();
 
 function SideBar({ children }) {
@@ -64,24 +66,28 @@ function SideBar({ children }) {
 
 export default SideBar;
 
-export function SideBarItems({ icon, text, active, alert }) {
+export function SideBarItems({ icon, text, to }) {
   const { expanded } = useContext(SidebarContext);
+  const location = useLocation();
+  const isActive = location.pathname === to;
   return (
-    <li
-      className={`relative flex items-center px-4 py-3 my-1 rounded-lg cursor-pointer transition-all ${
-        active
-          ? "bg-orange-500 text-white"
-          : "text-gray-300 hover:bg-gray-800 hover:text-white"
-      }`}
-    >
-      {icon}
-      <span
-        className={`overflow-hidden transition-all ${
-          expanded ? "ml-3 opacity-100" : "w-0 opacity-0"
+    <NavLink to={to}>
+      <li
+        className={`relative flex items-center px-4 py-3 my-1 rounded-lg cursor-pointer transition-all ${
+          isActive
+            ? "bg-orange-500 text-white"
+            : "text-gray-300 hover:bg-gray-800 hover:text-white"
         }`}
       >
-        {text}
-      </span>
-    </li>
+        {icon}
+        <span
+          className={`overflow-hidden transition-all ${
+            expanded ? "ml-3 opacity-100" : "w-0 opacity-0"
+          }`}
+        >
+          {text}
+        </span>
+      </li>
+    </NavLink>
   );
 }
